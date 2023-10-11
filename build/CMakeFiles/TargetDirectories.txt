@@ -1,0 +1,5 @@
+/home/pordipatrik/UMD/II/Software_dev/val/cpp-boilerplate-v2/build/CMakeFiles/rebuild_cache.dir
+/home/pordipatrik/UMD/II/Software_dev/val/cpp-boilerplate-v2/build/CMakeFiles/edit_cache.dir
+/home/pordipatrik/UMD/II/Software_dev/val/cpp-boilerplate-v2/build/app/CMakeFiles/rebuild_cache.dir
+/home/pordipatrik/UMD/II/Software_dev/val/cpp-boilerplate-v2/build/app/CMakeFiles/edit_cache.dir
+/home/pordipatrik/UMD/II/Software_dev/val/cpp-boilerplate-v2/build/app/CMakeFiles/shell-app.dir

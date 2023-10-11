@@ -1,0 +1,15 @@
+# Ignore build and generated files
+build/
+compile_commands.json
+
+# Ignore specific files
+CMakeCache.txt
+
+*json
+.clangd/
+
+.VC.db
+
+.DS_Store
+
+*.pyc

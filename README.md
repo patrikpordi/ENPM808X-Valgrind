@@ -19,6 +19,10 @@
 # Clean and start over:
   rm -rf build/
 ```
+
+## Valgrind:
+valgrind --leak-check=full --track-origins=yes ./build/app/shell-app > <OUTPUT_file-txt> 2>&1 
+
 ## Bugs:
 - Unitialized variable in main.
 - Memory had to be deallocated for the pointer.

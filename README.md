@@ -39,3 +39,14 @@ valgrind --leak-check=full --track-origins=yes ./build/app/shell-app > <OUTPUT_f
 - Why not?
     This is because numerous libraries in the shell-app and the CMake build of the project are dynamic. When you link libraries statically, their memory management behavior becomes integrated into your program's build, such as with CMake in this project. Valgrind may not distinguish between memory allocated by your program and that allocated by these libraries.
 
+    valgrind.org answer:
+
+
+    If your program is statically linked, most Valgrind tools will only work well if they are able to replace certain functions, such as malloc, with their own versions. By default, statically linked malloc functions are not replaced. A key indicator of this is if Memcheck says:
+
+    All heap blocks were freed -- no leaks are possible
+
+    when you know your program calls malloc. The workaround is to use the option --soname-synonyms=somalloc=NONE or to avoid statically linking your program.
+
+    There will also be no replacement if you use an alternative malloc library such as tcmalloc, jemalloc, ... In such a case, the option --soname-synonyms=somalloc=zzzz (where zzzz is the soname of the alternative malloc library) will allow Valgrind to replace the functions.
+
